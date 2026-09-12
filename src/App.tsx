@@ -20,7 +20,7 @@ const technologistPromise = technologistFetch();
 function App() {
   const [yourStack, setYourStack] = useState<DevStack[]>([]);
 
-  // Add technology
+  
   const handleAddStack = (tech: DevStack) => {
     setYourStack((previousStack) => {
       const alreadyExists = previousStack.some(
@@ -35,163 +35,79 @@ function App() {
     });
   };
 
-  // Remove technology
+ 
   const handleRemoveStack = (id: number) => {
     setYourStack((previousStack) =>
       previousStack.filter((item) => item.id !== id)
     );
   };
 
-  // Clear all
+  
   const handleClearStack = () => {
     setYourStack([]);
   };
 
   return (
     <section className="w-full min-h-screen bg-amber-100">
-
-      {/* Navbar */}
       <Nav />
-
-      {/* Banner */}
       <BannerSection />
-
-      {/* Technology title */}
       <Techno />
-
-      {/* Main Content */}
       <div className="container mx-auto px-4">
 
         <div className="flex flex-col lg:flex-row gap-6 items-start">
 
-          {/* Technology Cards */}
           <main className="w-full lg:flex-1 pt-10">
 
-            <Suspense
-              fallback={
-                <div className="text-center py-10">
-                  <h1 className="text-xl font-bold">
-                    Loading...
-                  </h1>
-                </div>
-              }
-            >
-              <Technologist
-                devStack={technologistPromise}
-                onAddStack={handleAddStack}
-              />
+            <Suspense fallback={<div className="text-center py-10">
+                  <h1 className="text-xl font-bold">Loading...</h1></div>}>
+              <Technologist devStack={technologistPromise} 
+              onAddStack={handleAddStack}/>
             </Suspense>
 
           </main>
 
-          {/* Your Stack */}
-          <aside
-            className="
-              w-full
-              lg:w-[320px]
-              shrink-0
-              bg-white
-              mt-0
-              lg:mt-10
-              p-4
-              rounded-xl
-              border
-              border-transparent
-              hover:border-red-500
-            "
-          >
+          
+          <aside className="w-full lg:w-[320px] shrink-0 bg-white mt-0 lg:mt-20 p-4 rounded-xl border
+              border-transparent hover:border-red-500">
 
-            {/* Stack Header */}
+            
             <div className="flex items-center justify-between gap-2 border-b pb-3">
 
-              <h1 className="text-lg sm:text-xl font-bold text-black">
-                Your Stack ({yourStack.length})
+              <h1 className="text-lg sm:text-xl font-bold text-black">Your Stack ({yourStack.length})
               </h1>
 
               {yourStack.length > 0 && (
-                <button
-                  onClick={handleClearStack}
-                  className="
-                    bg-red-500
-                    text-white
-                    px-3
-                    py-1
-                    rounded-lg
-                    hover:bg-red-600
-                    text-sm
-                  "
-                >
-                  Clear All
-                </button>
+                <button onClick={handleClearStack} className=" bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 text-sm">Remove All</button>
               )}
 
             </div>
 
-            {/* Stack Items */}
+            
             <div className="mt-4 space-y-3">
 
               {yourStack.length === 0 ? (
-                <p className="text-gray-500 font-bold text-center py-5">
-                  Your stack is empty
-                </p>
+                <p className="text-gray-500 font-bold text-center py-5">Your stack is empty</p>
               ) : (
                 yourStack.map((tech) => (
 
-                  <div
-                    key={tech.id}
-                    className="
-                      flex
-                      items-center
-                      gap-3
-                      border
-                      p-3
-                      rounded-lg
-                    "
-                  >
+                  <div key={tech.id} className="flex items-center gap-3 border p-3 rounded-lg">
 
-                    {/* Image */}
-                    <img
-                      src={tech.image}
-                      alt={tech.heading}
-                      className="
-                        w-10
-                        h-10
-                        sm:w-[50px]
-                        sm:h-[50px]
-                        object-cover
-                        rounded
-                      "
-                    />
+                   
+                    <img src={tech.image} alt={tech.heading}
+                      className="w-10 h-10 sm:w-[50px] sm:h-[50px] object-cover rounded"/>
 
-                    {/* Information */}
+                    
                     <div className="flex-1 min-w-0">
 
-                      <h2 className="font-bold text-black truncate">
-                        {tech.heading}
-                      </h2>
+                      <h2 className="font-bold text-black truncate">{tech.heading}</h2>
 
-                      <p className="text-sm text-gray-500">
-                        ⭐ {tech.rating}
-                      </p>
+                      <p className="text-sm text-gray-500">⭐ {tech.rating}</p>
 
                     </div>
 
-                    {/* Remove */}
-                    <button
-                      onClick={() => handleRemoveStack(tech.id)}
-                      className="
-                        bg-red-500
-                        text-white
-                        px-2
-                        sm:px-3
-                        py-1
-                        rounded
-                        text-sm
-                        hover:bg-red-600
-                      "
-                    >
-                      Remove
-                    </button>
+                    
+                    <button onClick={() => handleRemoveStack(tech.id)} 
+                    className=" bg-red-500 text-white px-2 sm:px-3 py-1 rounded text-sm hover:bg-red-600"> Remove </button>
 
                   </div>
 
@@ -205,7 +121,7 @@ function App() {
         </div>
       </div>
 
-      {/* Footer */}
+      
       <Footer />
 
     </section>
