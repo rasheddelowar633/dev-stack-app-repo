@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "heading": "Web Development",
+    "paragraph": "Learn modern web development and build responsive websites.",
+    "Paragraph": "HTML, CSS and JavaScript",
+    "rating": 4.8,
+    "button": "Explore Now"
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "heading": "JavaScript",
+    "paragraph": "Master JavaScript fundamentals and create interactive web applications.",
+    "Paragraph": "Beginner to Advanced",
+    "rating": 4.9,
+    "button": "Learn More"
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+    "heading": "React Development",
+    "paragraph": "Build powerful and reusable user interfaces with React.",
+    "Paragraph": "Components and Hooks",
+    "rating": 4.9,
+    "button": "Start Learning"
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1587620962725-abab7fe55159",
+    "heading": "Python Programming",
+    "paragraph": "Learn Python programming from the basics to real-world projects.",
+    "Paragraph": "Programming and Projects",
+    "rating": 4.7,
+    "button": "Explore Course"
+  },
+  {
+    "id": 5,
+    "image": "https://images.unsplash.com/photo-1599507593499-a3f7d7d97667",
+    "heading": "TypeScript",
+    "paragraph": "Write safer and scalable JavaScript applications using TypeScript.",
+    "Paragraph": "Types, Interfaces and Generics",
+    "rating": 4.8,
+    "button": "View Course"
+  },
+  {
+    "id": 6,
+    "image": "https://images.unsplash.com/photo-1558655146-d09347e92766",
+    "heading": "UI/UX Design",
+    "paragraph": "Create beautiful and user-friendly interfaces for modern applications.",
+    "Paragraph": "Design and User Experience",
+    "rating": 4.6,
+    "button": "Design Now"
+  },
+  {
+    "id": 7,
+    "image": "https://images.unsplash.com/photo-1547658719-da2b51169166",
+    "heading": "Tailwind CSS",
+    "paragraph": "Build responsive and modern websites quickly with Tailwind CSS.",
+    "Paragraph": "Utility First CSS",
+    "rating": 4.9,
+    "button": "Explore Technologies"
+  },
+  {
+    "id": 8,
+    "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+    "heading": "Node.js",
+    "paragraph": "Build fast and scalable backend applications using Node.js.",
+    "Paragraph": "Backend Development",
+    "rating": 4.7,
+    "button": "Learn Node.js"
+  },
+  {
+    "id": 9,
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    "heading": "Data Analytics",
+    "paragraph": "Analyze data and discover useful insights using modern tools.",
+    "Paragraph": "Data Analysis and Visualization",
+    "rating": 4.5,
+    "button": "Analyze Data"
+  },
+  {
+    "id": 10,
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "heading": "Cloud Computing",
+    "paragraph": "Understand cloud technologies and deploy modern applications.",
+    "Paragraph": "AWS, Cloud and Deployment",
+    "rating": 4.6,
+    "button": "Explore Cloud"
+  },
+  {
+    "id": 11,
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "heading": "Computer Science",
+    "paragraph": "Learn important computer science concepts and problem solving.",
+    "Paragraph": "Algorithms and Data Structures",
+    "rating": 4.8,
+    "button": "Study Now"
+  },
+  {
+    "id": 12,
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+    "heading": "Full Stack Development",
+    "paragraph": "Learn frontend and backend technologies to become a full stack developer.",
+    "Paragraph": "Frontend, Backend and Database",
+    "rating": 5.0,
+    "button": "Become a Developer"
+  }
+]
