@@ -59,7 +59,7 @@ function App() {
            
             <div className="flex gap-5 items-start ">
 
-              <div className="w-full lg:w-[1200px]">
+              <div className="w-full lg:w-[1100px]">
                 <main className="pt-16">
                   <Suspense fallback={<div><h1>Loading...</h1></div>}>
                     <Technologist devStack={technologistPromise} onAddStack={handleAddStack}/>
@@ -67,7 +67,7 @@ function App() {
                 </main>
               </div>
 
-              <aside className="w-[200px] shrink-0 bg-white mt-27 p-4 rounded-xl border border-transparent hover:border-red-500">
+              <aside className="w-[300px] shrink-0 bg-white mt-27 p-4 rounded-xl border border-transparent hover:border-red-500">
 
                 <div className="flex items-center justify-between border-b pb-3">
                   <h1 className="text-xl font-bold text-black">
