@@ -5,7 +5,7 @@ export interface DevStack{
   image: string;
   heading: string;
   paragraph: string;
-  Paragraph: string;
+  corse: string;
   rating: number;
   button: string;
 }

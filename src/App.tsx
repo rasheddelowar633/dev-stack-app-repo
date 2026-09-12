@@ -56,7 +56,7 @@ function App() {
 
         <div className="flex flex-col lg:flex-row gap-6 items-start">
 
-          <main className="w-full lg:flex-1 pt-10">
+          <main className="w-[1100px] lg:flex-1 pt-10">
 
             <Suspense fallback={<div className="text-center py-10">
                   <h1 className="text-xl font-bold">Loading...</h1></div>}>
@@ -67,7 +67,7 @@ function App() {
           </main>
 
           
-          <aside className="w-full lg:w-[320px] shrink-0 bg-white mt-0 lg:mt-20 p-4 rounded-xl border
+          <aside className="w-full lg:w-[200px] shrink-0 bg-white mt-0 lg:mt-20 p-4 rounded-xl border
               border-transparent hover:border-red-500">
 
             
@@ -76,7 +76,7 @@ function App() {
               <h1 className="text-lg sm:text-xl font-bold text-black">Your Stack ({yourStack.length})
               </h1>
 
-              {yourStack.length > 0 && (
+              {yourStack.length >  0   && (
                 <button onClick={handleClearStack} className=" bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 text-sm">Remove All</button>
               )}
 
