@@ -1,33 +1,60 @@
-import logo from "../assets/logo-text.png";
+<header className="fixed top-0 left-0 z-50 w-full bg-blue-100 shadow-md">
+  <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
 
-export default function Nav() {
-  return (
-    <header className="w-full fixed top-0 z-50">
-      <nav className= "container mx-auto bg-blue-100 h-16 px-4 flex justify-between items-center">
-        
-        {/* Logo */}
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-32"
-        />
+    
+    <div>
+      <h1 className="text-xl md:text-2xl font-bold text-blue-700">
+        DevStack
+      </h1>
+    </div>
 
-        {/* Menu */}
-        <ul className="flex gap-4 items-center">
-          <li className="  rounded-2xl p-2 text-black font-bold hover hover:bg-blue-300">Home</li>
-          <li className="  rounded-2xl p-2 text-black font-bold hover hover:bg-blue-300">Technologies</li>
-          <li className="  rounded-2xl p-2 text-black font-bold hover hover:bg-blue-300">Projects</li>
-          <li className=" rounded-2xl p-2 text-black font-bold hover hover:bg-blue-300">About</li>
-          <li className=" rounded-2xl p-2 text-black font-bold hover hover:bg-blue-300">Contact</li>
-        </ul>
+   
+    <div className="hidden md:flex items-center gap-6">
+      <a
+        href="#home"
+        className="font-medium hover:text-blue-600 transition"
+      >
+        Home
+      </a>
 
-        {/* Buttons */}
-        <div className="flex gap-2 items-center">
-          <button className=" border border-2 border-fuchsia-600 rounded-2xl p-2 text-black font-bold hover hover:bg-red-300">Sign In</button>
-          <button className=" bg-red-400 border border-2 border-fuchsia-600 rounded-2xl p-2 text-white font-bold hover hover:bg-red-300">Sign Up</button>
-        </div>
+      <a
+        href="#technologies"
+        className="font-medium hover:text-blue-600 transition"
+      >
+        Technologies
+      </a>
 
-      </nav>
-    </header>
-  );
-}
+      <a
+        href="#stack"
+        className="font-medium hover:text-blue-600 transition"
+      >
+        Your Stack
+      </a>
+
+      <a
+        href="#about"
+        className="font-medium hover:text-blue-600 transition"
+      >
+        About
+      </a>
+    </div>
+
+    
+    <button
+      className="hidden md:block px-5 py-2 rounded-lg
+                 bg-blue-600 text-white
+                 hover:bg-blue-700 transition"
+    >
+      Explore
+    </button>
+
+   
+    <button
+      className="md:hidden text-2xl font-bold"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+  </nav>
+</header>
