@@ -24,3 +24,4 @@ Parent controls the value	Component       controls its own value
 Changes when parent sends new props	      Changes using a state setter
 3/ use state is a tools which contain data
 4/data selected from components to randaring
+6/ Condition randaring is a tool which we chang any conditional topics
