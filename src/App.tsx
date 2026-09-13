@@ -20,7 +20,7 @@ const technologistPromise = technologistFetch();
 function App() {
   const [yourStack, setYourStack] = useState<DevStack[]>([]);
 
-  
+
   const handleAddStack = (tech: DevStack) => {
     setYourStack((previousStack) => {
       const alreadyExists = previousStack.some(
@@ -35,14 +35,14 @@ function App() {
     });
   };
 
- 
+
   const handleRemoveStack = (id: number) => {
     setYourStack((previousStack) =>
       previousStack.filter((item) => item.id !== id)
     );
   };
 
-  
+
   const handleClearStack = () => {
     setYourStack([]);
   };
@@ -56,33 +56,33 @@ function App() {
 
         <div className="flex flex-col lg:flex-row gap-6 items-start">
 
-          <main className="w-[1100px] lg:flex-1 pt-10">
+          <main className="w-[1300px] lg:flex-1 pt-10">
 
             <Suspense fallback={<div className="text-center py-10">
-                  <h1 className="text-xl font-bold">Loading...</h1></div>}>
-              <Technologist devStack={technologistPromise} 
-              onAddStack={handleAddStack}/>
+              <h1 className="text-xl font-bold">Loading...</h1></div>}>
+              <Technologist devStack={technologistPromise}
+                onAddStack={handleAddStack} />
             </Suspense>
 
           </main>
 
-          
-          <aside className="w-full lg:w-[200px] shrink-0 bg-white mt-0 lg:mt-20 p-4 rounded-xl border
-              border-transparent hover:border-red-500">
 
-            
+          <aside className="w-full lg:w-[220px] text-center shrink-0 bg-white mt-0 lg:mt-20 p-4 rounded-xl border border-transparent hover:border-amber-500">
+
+                  
             <div className="flex items-center justify-between gap-2 border-b pb-3">
-
-              <h1 className="text-lg sm:text-xl font-bold text-black">Your Stack ({yourStack.length})
+                
+              <h1 className="text-lg sm:text-xl font-bold text-black">Your Stack <br /> <span><p className="text-sm text-gray-400">Technology Selected</p></span>({yourStack.length})
               </h1>
-
-              {yourStack.length >  0   && (
+              
+                
+              {yourStack.length > 0 && (
                 <button onClick={handleClearStack} className=" bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 text-sm">Remove All</button>
               )}
 
             </div>
 
-            
+
             <div className="mt-4 space-y-3">
 
               {yourStack.length === 0 ? (
@@ -92,11 +92,11 @@ function App() {
 
                   <div key={tech.id} className="flex items-center gap-3 border p-3 rounded-lg">
 
-                   
-                    <img src={tech.image} alt={tech.heading}
-                      className="w-10 h-10 sm:w-[50px] sm:h-[50px] object-cover rounded"/>
 
-                    
+                    <img src={tech.image} alt={tech.heading}
+                      className="w-10 h-10 sm:w-[50px] sm:h-[50px] object-cover rounded" />
+
+
                     <div className="flex-1 min-w-0">
 
                       <h2 className="font-bold text-black truncate">{tech.heading}</h2>
@@ -105,9 +105,9 @@ function App() {
 
                     </div>
 
-                    
-                    <button onClick={() => handleRemoveStack(tech.id)} 
-                    className=" bg-red-500 text-white px-2 sm:px-3 py-1 rounded text-sm hover:bg-red-600"> Remove </button>
+
+                    <button onClick={() => handleRemoveStack(tech.id)}
+                      className=" bg-red-500 text-white px-2 sm:px-3 py-1 rounded text-sm hover:bg-red-600"> Remove </button>
 
                   </div>
 
@@ -121,7 +121,7 @@ function App() {
         </div>
       </div>
 
-      
+
       <Footer />
 
     </section>

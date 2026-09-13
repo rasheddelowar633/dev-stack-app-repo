@@ -4,10 +4,10 @@ export default function BannerSection() {
     return (
         <section className="w-full h-[500px]">
             <div className="hero min-h-screen bg-base-200">
-                <div className="flex justify-between gap-44">
+                <div className="flex justify-between gap-100">
 
-                   
-                    {/* Banner Content */}
+
+
                     <div>
                         <h1 className="text-5xl font-bold">
                             Build Your Ideal
@@ -25,20 +25,19 @@ export default function BannerSection() {
 
 
 
-                     <div className="grid grid-cols-2 gap-2 mt-20">
-                           <button className="btn border-0 bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-blue-600 hover:to-purple-700">
-                            Explore Technologies
-                        </button>
-                        <button className="btn btn-primary">Learn More</button>
-                     </div>
+                        <div className="grid grid-cols-2 gap-2 mt-20">
+                            <button className="btn border-0 bg-gradient-to-r from-orange-600 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700">
+                                Explore Technologies
+                            </button>
+                            <button className="btn btn-outline">Learn More</button>
+                        </div>
                     </div>
 
-                            {/* Banner Image */}
+
                     <img
                         src={bannerSection}
                         alt="Development Stack"
-                        className="max-w-sm rounded-lg shadow-2xl"
-                    />
+                        className="max-w-sm rounded-lg shadow-2xl" />
 
 
                 </div>

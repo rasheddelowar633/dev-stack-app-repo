@@ -1,6 +1,4 @@
-
-export interface DevStack{
-   
+export interface DevStack {
   id: number;
   image: string;
   heading: string;
